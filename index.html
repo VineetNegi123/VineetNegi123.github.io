@@ -227,22 +227,22 @@
       left: 50%;
     }
 
-    .timeline-item.left::before,
-    .timeline-item.right::before {
+    .timeline-item.left::before {
       content: '';
       position: absolute;
       top: 22px;
-      border: medium solid var(--background);
-    }
-
-    .timeline-item.left::before {
       right: 30px;
+      border: medium solid var(--background);
       border-width: 10px 0 10px 10px;
       border-color: transparent transparent transparent var(--background);
     }
 
     .timeline-item.right::before {
+      content: '';
+      position: absolute;
+      top: 22px;
       left: 30px;
+      border: medium solid var(--background);
       border-width: 10px 10px 10px 0;
       border-color: transparent var(--background) transparent transparent;
     }
@@ -304,6 +304,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <a href="#about">About Me</a>
@@ -333,9 +334,9 @@
         <div class="black-box"><strong>Specialisation:</strong> Energy & The Environment Engineering</div>
       </div>
       <div style="flex: 2; min-width: 300px;">
-        <p>I'm a Mechanical Engineer with over 2 years of experience in M&E services, specializing in AI-driven energy efficiency, smart building technologies, and sustainable solutions. My work focuses on integrating AI, IoT, and automation to optimize HVAC systems, enhance system reliability, and reduce energy consumption in commercial buildings.</p>
-        <p>Currently, I’m interning at Univers Pte. Ltd., where I develop and deploy AI-powered strategies for energy optimization and predictive maintenance using IoT sensor data, BMS analytics, and EnOS automation. I also bring hands-on expertise in ACMV systems, fire protection, and project management, with a proven track record in achieving Green Mark certification and driving impactful energy-saving initiatives.</p>
-        <p>I'm passionate about using data and technology to decarbonize buildings, and I'm eager to continue shaping the future of smart, sustainable infrastructure.</p>
+        <p>I'm a Mechanical Engineer with over 2 years of experience in M&E services, specializing in AI-driven energy efficiency, smart building technologies, and sustainable solutions.</p>
+        <p>Currently, I’m interning at Univers Pte. Ltd., where I develop and deploy AI-powered strategies using EnOS, BMS analytics, and IoT sensor data.</p>
+        <p>I'm passionate about using data and technology to decarbonize buildings and shape the future of smart, sustainable infrastructure.</p>
       </div>
     </div>
   </section>
@@ -377,11 +378,11 @@
       </div>
       <div class="project-card">
         <h4><a href="#">Predictive Maintenance Dashboard</a></h4>
-        <p>Developed a monitoring dashboard to identify faults in AHU and chiller operations using IoT sensor analytics.</p>
+        <p>Built a dashboard to detect anomalies in AHU and chiller operations via IoT data and machine learning.</p>
       </div>
       <div class="project-card">
         <h4><a href="#">Fire System Efficiency Audit</a></h4>
-        <p>Led a compliance review and commissioning process for fire panels, improving response time and maintenance workflow.</p>
+        <p>Led compliance testing and handover of fire systems with improved documentation and process reliability.</p>
       </div>
     </div>
   </section>
@@ -392,37 +393,38 @@
       <div class="timeline-item left">
         <div class="content">
           <h3>2025 – Present</h3>
-          <p><strong>Intern – Univers Pte. Ltd.</strong><br>
-          AI-driven energy optimization using EnOS, BMS analytics, and predictive maintenance strategies.</p>
+          <p><strong>Intern – Univers Pte. Ltd.</strong><br> AI-driven energy optimization using EnOS and IoT.</p>
         </div>
       </div>
       <div class="timeline-item right">
         <div class="content">
           <h3>2023 – 2024</h3>
-          <p><strong>Engineer – Jardine Engineering Corp.</strong><br>
-          Managed ACMV servicing, energy audit tasks, and fire system projects.</p>
+          <p><strong>Engineer – Jardine Engineering Corp.</strong><br> Managed ACMV and fire systems projects across sites.</p>
         </div>
       </div>
       <div class="timeline-item left">
         <div class="content">
           <h3>2022 – 2023</h3>
-          <p><strong>Graduate Trainee – SMRT Corporation</strong><br>
-          Supported maintenance strategies for mechanical equipment and developed reports for reliability improvements.</p>
+          <p><strong>Graduate Trainee – SMRT</strong><br> Assisted in reliability improvement and equipment maintenance strategies.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div style="text-align: center;">
-      <p>You can reach me at: <strong>vineet.engineer@gmail.com</strong></p>
-      <p>
-        <a href="https://www.linkedin.com/in/vineet-negi/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://github.com/vineetnegi" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-        <a href="mailto:vineet.engineer@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
-      </p>
+  <section id="contact" style="background-color: #000; color: #fff; text-align: center; padding: 60px 20px;">
+    <h2 class="section-title" style="color: #fff;">Contact Me</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">
+      Email: <a href="mailto:vineet.engineer@gmail.com" style="color: #fff; text-decoration: underline;">vineet.engineer@gmail.com</a>
+    </p>
+    <div style="margin-bottom: 30px;">
+      <a href="https://github.com/vineetnegi" target="_blank" style="color: #fff; margin: 0 15px; font-size: 1.2rem;">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/vineet-negi/" target="_blank" style="color: #fff; margin: 0 15px; font-size: 1.2rem;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
     </div>
+    <p style="font-size: 1rem; font-weight: 500;">Let's connect!</p>
   </section>
 
   <footer>
