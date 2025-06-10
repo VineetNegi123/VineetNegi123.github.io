@@ -227,22 +227,22 @@
       left: 50%;
     }
 
-    .timeline-item.left::before {
+    .timeline-item.left::before,
+    .timeline-item.right::before {
       content: '';
       position: absolute;
       top: 22px;
-      right: 30px;
       border: medium solid var(--background);
+    }
+
+    .timeline-item.left::before {
+      right: 30px;
       border-width: 10px 0 10px 10px;
       border-color: transparent transparent transparent var(--background);
     }
 
     .timeline-item.right::before {
-      content: '';
-      position: absolute;
-      top: 22px;
       left: 30px;
-      border: medium solid var(--background);
       border-width: 10px 10px 10px 0;
       border-color: transparent var(--background) transparent transparent;
     }
@@ -304,7 +304,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <a href="#about">About Me</a>
@@ -334,37 +333,110 @@
         <div class="black-box"><strong>Specialisation:</strong> Energy & The Environment Engineering</div>
       </div>
       <div style="flex: 2; min-width: 300px;">
-        <p>
-          I'm a Mechanical Engineer with over 2 years of experience in M&E services, specializing in AI-driven energy efficiency,
-          smart building technologies, and sustainable solutions. My work focuses on integrating AI, IoT, and automation to optimize
-          HVAC systems, enhance system reliability, and reduce energy consumption in commercial buildings.
-        </p>
-        <p>
-          Currently, I’m interning at Univers Pte. Ltd., where I develop and deploy AI-powered strategies for energy optimization
-          and predictive maintenance using IoT sensor data, BMS analytics, and EnOS automation. I also bring hands-on expertise in
-          ACMV systems, fire protection, and project management, with a proven track record in achieving Green Mark certification
-          and driving impactful energy-saving initiatives.
-        </p>
-        <p>
-          I'm passionate about using data and technology to decarbonize buildings, and I'm eager to continue shaping the future of
-          smart, sustainable infrastructure.
-        </p>
+        <p>I'm a Mechanical Engineer with over 2 years of experience in M&E services, specializing in AI-driven energy efficiency, smart building technologies, and sustainable solutions. My work focuses on integrating AI, IoT, and automation to optimize HVAC systems, enhance system reliability, and reduce energy consumption in commercial buildings.</p>
+        <p>Currently, I’m interning at Univers Pte. Ltd., where I develop and deploy AI-powered strategies for energy optimization and predictive maintenance using IoT sensor data, BMS analytics, and EnOS automation. I also bring hands-on expertise in ACMV systems, fire protection, and project management, with a proven track record in achieving Green Mark certification and driving impactful energy-saving initiatives.</p>
+        <p>I'm passionate about using data and technology to decarbonize buildings, and I'm eager to continue shaping the future of smart, sustainable infrastructure.</p>
       </div>
     </div>
   </section>
 
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+      <div class="skills-box">
+        <h3>Core Technical Skills</h3>
+        <ul>
+          <li>AI-Powered HVAC Optimization</li>
+          <li>IoT Sensor Analysis & EnOS</li>
+          <li>Energy Efficiency & Automation</li>
+          <li>Mechanical Systems & ACMV</li>
+          <li>Fire Protection Systems</li>
+          <li>Data Analytics (Excel, Python)</li>
+        </ul>
+      </div>
+      <div class="skills-box">
+        <h3>Supporting Skills</h3>
+        <ul>
+          <li>Project Management</li>
+          <li>Green Mark & Energy Audits</li>
+          <li>Technical Documentation</li>
+          <li>Team Collaboration</li>
+          <li>Problem-Solving</li>
+          <li>Client Communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4><a href="#">Smart HVAC Optimization</a></h4>
+        <p>Deployed AI-driven solutions across commercial buildings using EnOS, improving energy efficiency and system reliability.</p>
+      </div>
+      <div class="project-card">
+        <h4><a href="#">Predictive Maintenance Dashboard</a></h4>
+        <p>Developed a monitoring dashboard to identify faults in AHU and chiller operations using IoT sensor analytics.</p>
+      </div>
+      <div class="project-card">
+        <h4><a href="#">Fire System Efficiency Audit</a></h4>
+        <p>Led a compliance review and commissioning process for fire panels, improving response time and maintenance workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <h2 class="section-title">Career Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>2025 – Present</h3>
+          <p><strong>Intern – Univers Pte. Ltd.</strong><br>
+          AI-driven energy optimization using EnOS, BMS analytics, and predictive maintenance strategies.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>2023 – 2024</h3>
+          <p><strong>Engineer – Jardine Engineering Corp.</strong><br>
+          Managed ACMV servicing, energy audit tasks, and fire system projects.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>2022 – 2023</h3>
+          <p><strong>Graduate Trainee – SMRT Corporation</strong><br>
+          Supported maintenance strategies for mechanical equipment and developed reports for reliability improvements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div style="text-align: center;">
+      <p>You can reach me at: <strong>vineet.engineer@gmail.com</strong></p>
+      <p>
+        <a href="https://www.linkedin.com/in/vineet-negi/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/vineetnegi" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+        <a href="mailto:vineet.engineer@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vineet Negi. All rights reserved.</p>
+  </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true });</script>
-
-  <!-- Google Analytics (Optional) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA-TRACKING-ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'GA-TRACKING-ID');
   </script>
-
 </body>
 </html>
-
