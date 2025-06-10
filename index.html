@@ -1,44 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vineet Negi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      padding: 30px;
-      max-width: 700px;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+      padding: 40px 20px;
+      max-width: 800px;
       margin: auto;
     }
+
     h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       color: #2c3e50;
     }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
     a {
-      color: #2980b9;
+      color: #0077cc;
       text-decoration: none;
     }
-    .section {
-      margin-bottom: 40px;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tagline {
+      color: #555;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #37474f;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Hello, I'm Vineet Negi!</h1>
-  <p>Welcome to my personal website. I'm a project manager and mechanical engineer passionate about energy efficiency, AI, and sustainability.</p>
 
-  <div class="section">
-    <h2>📂 Projects</h2>
-    <ul>
-      <li><a href="https://carbondashboard2025-gpo8ezliuj6hv2mrfduefb.streamlit.app/">Carbon Emission Dashboard</a> – A Streamlit app to visualize CO₂ savings from HVAC optimizations.</li>
-    </ul>
-  </div>
+  <h1>Hi, I'm Vineet Negi</h1>
+  <p class="tagline">Project Manager | Mechanical Engineer | Smart HVAC | Energy Efficiency & AI</p>
 
-  <div class="section">
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:Vineetair10@hotmail.com">Vineetair10@hotmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vineet-negi-3b45b1175/">vineet-negi-3b45b1175</a></p>
-  </div>
+  <section>
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p>I’m passionate about creating smarter, greener, and more sustainable energy systems. With experience in project management, HVAC optimization, and AI integration, I work at the intersection of technology and sustainability to drive real-world impact.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Projects</h2>
+    <div class="card">
+      <p><strong><a href="https://carbondashboard2025-gpo8ezliuj6hv2mrfduefb.streamlit.app/" target="_blank">Carbon Emission Dashboard</a></strong></p>
+      <p>A Streamlit web app to estimate and visualize CO₂ reductions from HVAC optimizations using smart controls.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:Vineetair10@hotmail.com">Vineetair10@hotmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vineet-negi-3b45b1175/">vineet-negi-3b45b1175</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Vineet Negi — Built with ❤️ using GitHub Pages
+  </footer>
+
 </body>
 </html>
