@@ -96,20 +96,20 @@
       border-radius: 2px;
     }
 
-    .about, .skills-container {
+    .black-box {
+      background: #000;
+      color: #fff;
+      font-size: 1rem;
+      padding: 12px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-    }
-
-    .about div { flex: 1; }
-
-    .box-label {
-      background: var(--primary);
-      color: #fff;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-weight: 600;
     }
 
     .skills-box {
@@ -186,13 +186,8 @@
       z-index: 1;
     }
 
-    .timeline-item.left {
-      left: 0;
-    }
-
-    .timeline-item.right {
-      left: 50%;
-    }
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 50%; }
 
     .timeline-item.left::before {
       content: '';
@@ -212,9 +207,7 @@
       border-color: transparent var(--background) transparent transparent;
     }
 
-    .timeline-item.right::after {
-      left: -10px;
-    }
+    .timeline-item.right::after { left: -10px; }
 
     .timeline-item .content {
       padding: 20px;
@@ -236,7 +229,7 @@
     }
 
     @media (max-width: 768px) {
-      .about, .skills-container { flex-direction: column; }
+      .skills-container { flex-direction: column; }
       .timeline::after { left: 31px; }
       .timeline-item {
         width: 100%;
@@ -265,7 +258,7 @@
     </nav>
   </header>
 
-  <div class="hero" data-aos="fade-up">
+  <div class="hero">
     <h2>Hello and welcome to my website</h2>
     <h1>I am Vineet Negi</h1>
     <h3>Project Manager | Mechanical Engineer | Energy Optimization Specialist</h3>
@@ -275,15 +268,12 @@
 
   <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div class="about">
-      <div>
-        <div class="box-label">Field: Mechanical & Energy Systems</div>
-        <div class="box-label">Role: Project Manager</div>
-        <div class="box-label">Passion: Smart HVAC, AI, Sustainability</div>
-      </div>
-      <div>
-        <p>I have worked on large-scale energy optimization projects involving AI and IoT systems to improve HVAC performance in commercial buildings across Singapore. My expertise lies in blending engineering with AI tools to build smarter, greener infrastructures.</p>
-      </div>
+    <div style="display: flex; flex-direction: column;">
+      <div class="black-box"><strong>Name:</strong> Vineet Negi</div>
+      <div class="black-box"><strong>School:</strong> Nanyang Technological University</div>
+      <div class="black-box"><strong>Degree:</strong> Bachelor of Engineering</div>
+      <div class="black-box"><strong>Major:</strong> Mechanical Engineering</div>
+      <div class="black-box"><strong>Specialisation:</strong> Energy & The Environment Engineering</div>
     </div>
   </section>
 
@@ -375,5 +365,6 @@
     gtag('js', new Date());
     gtag('config', 'GA-TRACKING-ID');
   </script>
+
 </body>
 </html>
