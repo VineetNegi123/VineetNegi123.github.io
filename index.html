@@ -17,7 +17,11 @@
       --text: #333;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -53,10 +57,26 @@
       background: var(--background);
     }
 
-    .hero h2 { font-size: 2rem; margin-bottom: 10px; }
-    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-    .hero h3 { font-size: 1.4rem; color: #555; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h3 {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
 
     .hero button {
       padding: 12px 24px;
@@ -106,6 +126,11 @@
       font-weight: 500;
     }
 
+    .about p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -127,12 +152,18 @@
       padding-bottom: 5px;
     }
 
-    .skills-box ul { list-style: none; padding: 0; }
-    .skills-box li { margin-bottom: 5px; }
+    .skills-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-box li {
+      margin-bottom: 5px;
+    }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
 
@@ -164,7 +195,8 @@
       position: absolute;
       width: 6px;
       background: var(--accent);
-      top: 0; bottom: 0;
+      top: 0;
+      bottom: 0;
       left: 50%;
       margin-left: -3px;
     }
@@ -178,7 +210,8 @@
     .timeline-item::after {
       content: '';
       position: absolute;
-      width: 20px; height: 20px;
+      width: 20px;
+      height: 20px;
       background: var(--background);
       border: 4px solid var(--accent);
       top: 15px;
@@ -186,13 +219,19 @@
       z-index: 1;
     }
 
-    .timeline-item.left { left: 0; }
-    .timeline-item.right { left: 50%; }
+    .timeline-item.left {
+      left: 0;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
 
     .timeline-item.left::before {
       content: '';
       position: absolute;
-      top: 22px; right: 30px;
+      top: 22px;
+      right: 30px;
       border: medium solid var(--background);
       border-width: 10px 0 10px 10px;
       border-color: transparent transparent transparent var(--background);
@@ -201,13 +240,16 @@
     .timeline-item.right::before {
       content: '';
       position: absolute;
-      top: 22px; left: 30px;
+      top: 22px;
+      left: 30px;
       border: medium solid var(--background);
       border-width: 10px 10px 10px 0;
       border-color: transparent var(--background) transparent transparent;
     }
 
-    .timeline-item.right::after { left: -10px; }
+    .timeline-item.right::after {
+      left: -10px;
+    }
 
     .timeline-item .content {
       padding: 20px;
@@ -229,20 +271,35 @@
     }
 
     @media (max-width: 768px) {
-      .skills-container { flex-direction: column; }
-      .timeline::after { left: 31px; }
+      .skills-container,
+      .about {
+        flex-direction: column;
+      }
+
+      .timeline::after {
+        left: 31px;
+      }
+
       .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
       }
-      .timeline-item.left, .timeline-item.right { left: 0; }
+
+      .timeline-item.left,
+      .timeline-item.right {
+        left: 0;
+      }
+
       .timeline-item::before {
         left: 60px;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--background) transparent transparent;
       }
-      .timeline-item::after { left: 15px; }
+
+      .timeline-item::after {
+        left: 15px;
+      }
     }
   </style>
 </head>
@@ -266,93 +323,39 @@
     <a href="/VineetNegi_Resume.pdf"><button>Download My Resume <i class="fa fa-download"></i></button></a>
   </div>
 
+  <!-- Updated About Me Section -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
-    <div style="display: flex; flex-direction: column;">
-      <div class="black-box"><strong>Name:</strong> Vineet Negi</div>
-      <div class="black-box"><strong>School:</strong> Nanyang Technological University</div>
-      <div class="black-box"><strong>Degree:</strong> Bachelor of Engineering</div>
-      <div class="black-box"><strong>Major:</strong> Mechanical Engineering</div>
-      <div class="black-box"><strong>Specialisation:</strong> Energy & The Environment Engineering</div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-container">
-      <div class="skills-box">
-        <h3>Technical Tools</h3>
-        <ul>
-          <li>Python</li>
-          <li>Excel VBA</li>
-          <li>Streamlit</li>
-          <li>GitHub</li>
-        </ul>
+    <div class="about" style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <div class="black-box"><strong>Name:</strong> Vineet Negi</div>
+        <div class="black-box"><strong>School:</strong> Nanyang Technological University</div>
+        <div class="black-box"><strong>Degree:</strong> Bachelor of Engineering</div>
+        <div class="black-box"><strong>Major:</strong> Mechanical Engineering</div>
+        <div class="black-box"><strong>Specialisation:</strong> Energy & The Environment Engineering</div>
       </div>
-      <div class="skills-box">
-        <h3>Domains</h3>
-        <ul>
-          <li>Smart HVAC</li>
-          <li>Energy Optimization</li>
-          <li>IoT Integration</li>
-        </ul>
-      </div>
-      <div class="skills-box">
-        <h3>Certifications</h3>
-        <ul>
-          <li>CAPM (in progress)</li>
-          <li>35hr PMP Course Completed</li>
-          <li>Schneider Energy Efficiency Training</li>
-        </ul>
+      <div style="flex: 2; min-width: 300px;">
+        <p>
+          I'm a Mechanical Engineer with over 2 years of experience in M&E services, specializing in AI-driven energy efficiency,
+          smart building technologies, and sustainable solutions. My work focuses on integrating AI, IoT, and automation to optimize
+          HVAC systems, enhance system reliability, and reduce energy consumption in commercial buildings.
+        </p>
+        <p>
+          Currently, I’m interning at Univers Pte. Ltd., where I develop and deploy AI-powered strategies for energy optimization
+          and predictive maintenance using IoT sensor data, BMS analytics, and EnOS automation. I also bring hands-on expertise in
+          ACMV systems, fire protection, and project management, with a proven track record in achieving Green Mark certification
+          and driving impactful energy-saving initiatives.
+        </p>
+        <p>
+          I'm passionate about using data and technology to decarbonize buildings, and I'm eager to continue shaping the future of
+          smart, sustainable infrastructure.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h4><a href="https://carbondashboard2025-gpo8ezliuj6hv2mrfduefb.streamlit.app/">Carbon Emission Dashboard</a></h4>
-        <p>A Streamlit app estimating HVAC-related CO₂ savings with visual charts and real-time energy performance data.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="career">
-    <h2 class="section-title">Career Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-item left">
-        <div class="content">
-          <h3>2024 – Present</h3>
-          <p>Senior Project Manager at XYZ, leading AI‑driven HVAC optimization across 5 commercial sites, saving ~15% energy.</p>
-        </div>
-      </div>
-      <div class="timeline-item right">
-        <div class="content">
-          <h3>2021 – 2024</h3>
-          <p>Mechanical Engineer at ABC Energy: developed sensor‑based HVAC control systems, reduced peak demand by 12%.</p>
-        </div>
-      </div>
-      <div class="timeline-item left">
-        <div class="content">
-          <h3>2018 – 2021</h3>
-          <p>Junior Engineer at GreenTech: implemented energy‑saving retrofits in commercial buildings (~10% savings).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <footer>
-      <p>Email: Vineetair10@hotmail.com</p>
-      <p>
-        <a href="https://github.com/VineetNegi123"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/vineet-negi-3b45b1175/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </p>
-      <p>Feel free to reach out for collaborations or just to say hi!</p>
-    </footer>
-  </section>
+  <!-- You can keep the rest of the sections below (Skills, Projects, Timeline, Contact) as in previous versions -->
+  <!-- Let me know if you want them included again here. -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 800, once: true });</script>
