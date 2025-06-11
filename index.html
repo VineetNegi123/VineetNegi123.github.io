@@ -54,21 +54,25 @@
     .hero h2 {
       font-size: 1.8rem;
       color: var(--accent);
+      animation: fadeInDown 1s ease-in-out;
     }
     .hero h1 {
       font-size: 3rem;
       font-weight: 700;
       margin: 10px 0;
+      animation: fadeInUp 1s ease-in-out;
     }
     .hero h3 {
       font-size: 1.4rem;
       color: #666;
       margin-bottom: 20px;
+      animation: fadeInUp 1.5s ease-in-out;
     }
     .hero p {
       font-size: 1.1rem;
       max-width: 700px;
       margin: 0 auto 30px auto;
+      animation: fadeInUp 2s ease-in-out;
     }
     .hero button {
       background-color: var(--accent);
@@ -79,6 +83,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      animation: fadeInUp 2.5s ease-in-out;
     }
     .hero button:hover {
       background-color: #0041c4;
@@ -131,16 +136,15 @@
     .skills-box li {
       margin-bottom: 6px;
     }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
     .project-card {
       background: #fff;
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
     }
     .project-card h4 a {
       color: var(--accent);
@@ -149,19 +153,24 @@
     .project-card h4 a:hover {
       text-decoration: underline;
     }
-    .timeline {
-      position: relative;
-      margin-top: 20px;
-    }
     .timeline-item {
       background: #fff;
       padding: 20px;
       margin: 20px 0;
       border-left: 4px solid var(--accent);
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      position: relative;
+      animation: fadeInUp 1s ease-in-out;
     }
-    .timeline-item h3 {
-      margin-bottom: 8px;
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
     }
     footer {
       background: var(--primary);
@@ -179,10 +188,19 @@
         flex-direction: column;
       }
     }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
-<!-- The HTML structure remains the same. Only styling is changed to improve professionalism and clarity -->
-<!-- Please continue to use your current HTML layout. If you'd like me to enhance content or structure too, let me know. -->
+<!-- Content remains unchanged. Style and animations improved. -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
